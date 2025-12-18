@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackberrys | Official Support Portal</title>
     <style>
-        /* Background Slider Setup */
+        /* Smooth Background Slider */
         .bg-slider {
             position: fixed;
             top: 0;
@@ -13,7 +13,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            overflow: hidden;
+            background-color: #000;
         }
 
         .slide {
@@ -23,44 +23,45 @@
             background-size: cover;
             background-position: center;
             opacity: 0;
-            animation: slideShow 15s infinite;
+            animation: crossFade 20s infinite ease-in-out;
         }
 
-        /* Slide Images - Using Premium Fashion Aesthetics */
-        .slide:nth-child(1) { background-image: url('https://blackberrys.com/cdn/shop/files/Exclusive_Members_Preview_Banner_Mobile_1.jpg'); animation-delay: 0s; }
-        .slide:nth-child(2) { background-image: url('https://blackberrys.com/cdn/shop/files/The_Sharp_Cut_Sale_Banner_Mobile.jpg'); animation-delay: 5s; }
-        .slide:nth-child(3) { background-image: url('https://blackberrys.com/cdn/shop/files/Mobile_Banner_2_7f308323-2815-4428-9892-0b191e4663d2.jpg'); animation-delay: 10s; }
+        /* Your 4 High-Res Images */
+        .slide:nth-child(1) { background-image: url('https://blackberrys.com/cdn/shop/files/SUITS_BLAZERS_3.jpg?v=1742896053&width=1800'); animation-delay: 0s; }
+        .slide:nth-child(2) { background-image: url('https://blackberrys.com/cdn/shop/files/FUTURA_BLAZER_1_f03a3f55-3528-49f3-a94d-612a0a532b82.jpg?v=1742630679&width=1800'); animation-delay: 5s; }
+        .slide:nth-child(3) { background-image: url('https://blackberrys.com/cdn/shop/files/BLEED_ZER0_cef962d8-c32a-472b-bbfb-cb83ecd6a660.jpg?v=1742630682&width=1800'); animation-delay: 10s; }
+        .slide:nth-child(4) { background-image: url('https://blackberrys.com/cdn/shop/files/PRINTED_SHIRTS_CASUAL_f5c1ee13-428d-4ed8-baf5-e5098a01dd29.jpg?v=1742630683&width=1800'); animation-delay: 15s; }
 
-        @keyframes slideShow {
-            0% { opacity: 0; transform: scale(1); }
-            10% { opacity: 0.4; }
-            33% { opacity: 0.4; }
-            43% { opacity: 0; transform: scale(1.1); }
+        @keyframes crossFade {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            25% { opacity: 1; }
+            30% { opacity: 0; }
             100% { opacity: 0; }
+        }
+
+        /* Content Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.55); /* Darker overlay for better text contrast */
+            min-height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
         }
 
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Times New Roman', Times, serif;
-            color: #fff; /* White text to stand out against background */
-        }
-
-        /* Semi-transparent overlay to keep text readable */
-        .overlay {
-            background: rgba(0, 0, 0, 0.6);
-            min-height: 100vh;
-            padding: 20px;
+            color: #fff;
         }
 
         .navbar {
-            padding: 20px;
+            padding: 30px;
             text-align: center;
         }
 
         .logo-img {
-            max-width: 200px;
-            filter: brightness(0) invert(1); /* Makes the logo white */
+            max-width: 250px;
+            filter: brightness(0) invert(1); /* Pure white logo */
         }
 
         .container {
@@ -69,21 +70,22 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px); /* Modern frosted glass effect */
+            background: rgba(0, 0, 0, 0.7); /* Professional dark glass look */
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 30px;
+            padding: 35px;
             margin-bottom: 30px;
-            border-radius: 4px;
+            border-radius: 2px;
+            backdrop-filter: blur(5px);
         }
 
         h2 {
             font-size: 1.2rem;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             border-bottom: 1px solid #fff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-weight: normal;
         }
 
         label {
@@ -91,8 +93,9 @@
             margin-top: 15px;
             font-family: Arial, sans-serif;
             font-size: 10px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            color: #ccc;
         }
 
         input, textarea {
@@ -103,35 +106,38 @@
             background: rgba(255, 255, 255, 0.1);
             color: #fff;
             box-sizing: border-box;
+            outline: none;
         }
-
-        input::placeholder { color: rgba(255, 255, 255, 0.6); }
 
         .btn-premium {
             background-color: #fff;
             color: #000;
             border: none;
-            padding: 15px;
+            padding: 18px;
             width: 100%;
             text-transform: uppercase;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             cursor: pointer;
-            margin-top: 20px;
+            margin-top: 25px;
+            transition: 0.3s;
         }
+
+        .btn-premium:hover { background-color: #ddd; }
 
         .footer {
             text-align: center;
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 2px;
-            padding: 40px 0;
-            color: rgba(255, 255, 255, 0.6);
+            padding: 50px 0;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
 
     <div class="bg-slider">
+        <div class="slide"></div>
         <div class="slide"></div>
         <div class="slide"></div>
         <div class="slide"></div>
@@ -145,22 +151,24 @@
         <div class="container">
             <div class="card">
                 <h2>Instant Call Back Request</h2>
-                <p style="font-family: Arial; font-size: 13px;">Our customer support representative will contact you personally to address your concerns.</p>
+                <p style="font-family: Arial; font-size: 13px; color: #ddd;">Please provide your 10-digit mobile number. Our customer support representative will contact you personally to address your concerns.</p>
                 <label>Mobile Number</label>
-                <input type="tel" id="callPhone" placeholder="Enter 10-digit number" maxlength="10">
+                <input type="tel" id="callPhone" placeholder="Mobile Number" maxlength="10">
                 <button class="btn-premium" onclick="reqCall()">Request Call Back</button>
             </div>
 
             <div class="card">
                 <h2>Raise a Support Ticket</h2>
                 <label>Full Name</label>
-                <input type="text" id="name" placeholder="Name as per invoice">
+                <input type="text" id="name" placeholder="Full Name">
                 <label>Order ID</label>
-                <input type="text" id="order" placeholder="e.g., BB-100234">
+                <input type="text" id="order" placeholder="e.g. BB-123456">
+                <label>Email ID</label>
+                <input type="email" id="email" placeholder="example@email.com">
                 <label>Contact Number</label>
                 <input type="tel" id="phone" placeholder="10-Digit Mobile Number" maxlength="10">
-                <label>Description</label>
-                <textarea id="msg" rows="3" placeholder="Briefly describe your issue..."></textarea>
+                <label>Message</label>
+                <textarea id="msg" rows="3" placeholder="Briefly describe your concern..."></textarea>
                 <button class="btn-premium" onclick="raiseTicket()">Submit Inquiry</button>
             </div>
         </div>
@@ -176,17 +184,19 @@
             if(p.length === 10) {
                 alert("Request Acknowledged.\n\nThank you for reaching out. Our customer support representative will contact you on " + p + " shortly.");
             } else {
-                alert("Please ensure the mobile number provided is exactly 10 digits.");
+                alert("Please enter a valid 10-digit mobile number.");
             }
         }
 
         function raiseTicket() {
             const n = document.getElementById('name').value;
+            const p = document.getElementById('phone').value;
             const tId = "BB-SR-" + Math.floor(100000 + Math.random() * 900000);
-            if(n && document.getElementById('phone').value.length === 10) {
+            
+            if(n && p.length === 10) {
                 alert("Thank you, " + n + ".\n\nYour grievance has been logged.\n\nTicket ID: " + tId + "\n\nOur customer support representative will review your case shortly.");
             } else {
-                alert("Please fill in all required fields correctly.");
+                alert("Please fill in all fields correctly.");
             }
         }
     </script>
