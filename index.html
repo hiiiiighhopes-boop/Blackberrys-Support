@@ -3,136 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackberrys | Official Support Portal</title>
+    <title>Blackberrys | Official Support & Grievance Portal</title>
     <style>
         body {
-            background-color: #fcfcfc;
-            color: #1a1a1a;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #222;
+            font-family: 'Times New Roman', Times, serif; /* Elegant, premium feel */
             margin: 0;
             padding: 0;
         }
 
+        /* Header Style with Logo */
         .navbar {
-            border-bottom: 1px solid #eeeeee;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff;
+            padding: 30px 50px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .logo { font-weight: 900; letter-spacing: 4px; text-transform: uppercase; font-size: 22px; }
+        .logo-img {
+            max-width: 280px;
+            height: auto;
+        }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 700px;
+            margin: 50px auto;
             padding: 20px;
         }
 
-        .section-box {
+        /* Box styling for features */
+        .card {
+            border: 1px solid #dcdcdc;
+            padding: 45px;
+            margin-bottom: 40px;
             background: #fff;
-            border: 1px solid #e0e0e0;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
-        h2 { font-size: 18px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px; }
-        
-        p { color: #666; font-size: 14px; }
-
-        label { display: block; margin-top: 15px; font-size: 12px; font-weight: bold; text-transform: uppercase; }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            font-size: 14px;
+        h2 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 400;
         }
 
-        .btn-black {
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 15px 40px;
-            font-size: 13px;
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Form styling */
+        label {
+            display: block;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
             font-weight: bold;
             text-transform: uppercase;
-            cursor: pointer;
-            margin-top: 20px;
-            width: 100%;
             letter-spacing: 1px;
         }
 
-        .btn-black:hover { background-color: #333; }
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 15px;
+            background: #fafafa;
+        }
 
-        .footer { padding: 40px; text-align: center; font-size: 12px; color: #999; border-top: 1px solid #eee; }
+        input:focus {
+            border-color: #000;
+            background: #fff;
+            outline: none;
+        }
+
+        .btn-premium {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 18px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 3px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.4s ease;
+        }
+
+        .btn-premium:hover {
+            background-color: #444;
+            letter-spacing: 4px;
+        }
+
+        .footer {
+            padding: 60px 20px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">Blackberrys</div>
-        <div style="font-size: 10px; font-weight: bold;">CUSTOMER CARE</div>
+        <img src="https://www.brandinginasia.com/wp-content/uploads/2021/09/Blackberrys-Branding-in-Asia.jpg" alt="Blackberrys Logo" class="logo-img">
     </nav>
 
     <div class="container">
-        <div class="section-box">
-            <h2>Request a Call Back</h2>
-            <p>Please enter your mobile number. A customer representative will contact you shortly to assist with your requirements.</p>
-            <input type="tel" id="callbackPhone" placeholder="10-Digit Mobile Number" maxlength="10">
-            <button class="btn-black" onclick="requestCallback()">Request Call</button>
+        
+        <div class="card">
+            <h2>Personal Consultation</h2>
+            <p>Please provide your contact details. A customer representative will contact you personally to address your concerns.</p>
+            
+            <label>Mobile Number</label>
+            <input type="tel" id="callPhone" placeholder="Enter 10-digit number" maxlength="10">
+            
+            <button class="btn-premium" onclick="reqCall()">Request Call Back</button>
         </div>
 
-        <div class="section-box">
+        <div class="card">
             <h2>Raise a Support Ticket</h2>
-            <p>If you have an inquiry regarding your order, please fill out the details below.</p>
-            
+            <p>Submit your formal inquiry below. Our team ensures a response within 24-48 business hours.</p>
+
             <label>Full Name</label>
-            <input type="text" id="custName" placeholder="Enter your name">
-
-            <label>Email ID</label>
-            <input type="email" id="custEmail" placeholder="example@mail.com">
-
-            <label>Mobile Number</label>
-            <input type="tel" id="custPhone" placeholder="10-Digit Mobile Number" maxlength="10">
+            <input type="text" id="name" placeholder="Name as per invoice">
 
             <label>Order ID</label>
-            <input type="text" id="orderId" placeholder="e.g. BB123456">
+            <input type="text" id="order" placeholder="e.g., BB-100234">
 
-            <label>Concern / Message</label>
-            <textarea id="concern" rows="4" placeholder="How can we help you?"></textarea>
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="email@address.com">
 
-            <button class="btn-black" onclick="submitTicket()">Submit Inquiry</button>
+            <label>Contact Number</label>
+            <input type="tel" id="phone" placeholder="10-Digit Mobile Number" maxlength="10">
+
+            <label>Description of Concern</label>
+            <textarea id="msg" rows="4" placeholder="Briefly describe your issue..."></textarea>
+
+            <button class="btn-premium" onclick="raiseTicket()">Submit Inquiry</button>
         </div>
+
     </div>
 
     <footer class="footer">
-        © 2025 Mohan Clothing Co. Pvt. Ltd. | Keep Rising
+        © 2025 MOHAN CLOTHING CO. PVT. LTD. | KEEP RISING
     </footer>
 
     <script>
-        function requestCallback() {
-            const phone = document.getElementById('callbackPhone').value;
-            if (phone.length === 10) {
-                alert("Thank you, Boss. A Blackberrys customer representative will call you on " + phone + " shortly.");
+        function reqCall() {
+            const p = document.getElementById('callPhone').value;
+            if(p.length === 10) {
+                alert("Request Acknowledged.\n\nThank you for reaching out. A Blackberrys customer representative will contact you on " + p + " shortly.");
             } else {
-                alert("Please enter a valid 10-digit mobile number.");
+                alert("Please ensure the mobile number provided is exactly 10 digits.");
             }
         }
 
-        function submitTicket() {
-            const name = document.getElementById('custName').value;
-            const order = document.getElementById('orderId').value;
-            const ticketId = "BB-" + Math.floor(100000 + Math.random() * 900000);
+        function raiseTicket() {
+            const n = document.getElementById('name').value;
+            const o = document.getElementById('order').value;
+            const tId = "BB-SR-" + Math.floor(100000 + Math.random() * 900000);
 
-            if(name && order) {
-                alert("Confirmation: \n\nDear " + name + ", your ticket has been raised successfully. \n\nTicket ID: " + ticketId + "\nOrder Reference: " + order + "\n\nYou will receive an update on your email shortly.");
+            if(n && o && document.getElementById('phone').value.length === 10) {
+                alert("Thank you, " + n + ".\n\nYour grievance has been logged.\n\nTicket ID: " + tId + "\n\nPlease keep this ID for future reference.");
             } else {
-                alert("Please fill in all the required fields.");
+                alert("Please fill in all required fields and ensure the phone number is correct.");
             }
         }
     </script>
