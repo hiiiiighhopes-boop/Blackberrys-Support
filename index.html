@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackberrys | Official Support Portal</title>
+    <title>Blackberrys | Customer Support Portal</title>
     <style>
-        /* Smooth Background Slider */
+        /* Smooth Image Slider Background */
         .bg-slider {
             position: fixed;
             top: 0;
@@ -26,7 +26,7 @@
             animation: crossFade 20s infinite ease-in-out;
         }
 
-        /* Your 4 High-Res Images */
+        /* Using your provided high-res suit images */
         .slide:nth-child(1) { background-image: url('https://blackberrys.com/cdn/shop/files/SUITS_BLAZERS_3.jpg?v=1742896053&width=1800'); animation-delay: 0s; }
         .slide:nth-child(2) { background-image: url('https://blackberrys.com/cdn/shop/files/FUTURA_BLAZER_1_f03a3f55-3528-49f3-a94d-612a0a532b82.jpg?v=1742630679&width=1800'); animation-delay: 5s; }
         .slide:nth-child(3) { background-image: url('https://blackberrys.com/cdn/shop/files/BLEED_ZER0_cef962d8-c32a-472b-bbfb-cb83ecd6a660.jpg?v=1742630682&width=1800'); animation-delay: 10s; }
@@ -40,46 +40,37 @@
             100% { opacity: 0; }
         }
 
-        /* Content Overlay */
         .overlay {
-            background: rgba(0, 0, 0, 0.55); /* Darker overlay for better text contrast */
+            background: rgba(0, 0, 0, 0.65); /* Darker overlay for better visibility */
             min-height: 100vh;
             padding: 20px;
             overflow-y: auto;
         }
 
-        body {
-            margin: 0;
-            font-family: 'Times New Roman', Times, serif;
-            color: #fff;
-        }
+        body { margin: 0; font-family: 'Times New Roman', Times, serif; color: #fff; }
 
-        .navbar {
-            padding: 30px;
-            text-align: center;
-        }
-
+        /* Fixed Logo Visibility */
+        .navbar { padding: 40px 20px; text-align: center; }
         .logo-img {
-            max-width: 250px;
-            filter: brightness(0) invert(1); /* Pure white logo */
+            max-width: 280px;
+            height: auto;
+            /* Filter makes the black logo white and visible on dark background */
+            filter: brightness(0) invert(1); 
         }
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        .container { max-width: 600px; margin: 0 auto; }
 
         .card {
-            background: rgba(0, 0, 0, 0.7); /* Professional dark glass look */
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 35px;
+            background: rgba(20, 20, 20, 0.85); /* Premium dark card */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 40px;
             margin-bottom: 30px;
             border-radius: 2px;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
         }
 
         h2 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             letter-spacing: 3px;
             text-transform: uppercase;
             border-bottom: 1px solid #fff;
@@ -89,49 +80,24 @@
         }
 
         label {
-            display: block;
-            margin-top: 15px;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #ccc;
+            display: block; margin-top: 15px; font-family: Arial; font-size: 10px;
+            letter-spacing: 2px; text-transform: uppercase; color: #bbb;
         }
 
         input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            box-sizing: border-box;
-            outline: none;
+            width: 100%; padding: 14px; margin-top: 5px; border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05); color: #fff; box-sizing: border-box; outline: none;
         }
 
         .btn-premium {
-            background-color: #fff;
-            color: #000;
-            border: none;
-            padding: 18px;
-            width: 100%;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 3px;
-            cursor: pointer;
-            margin-top: 25px;
-            transition: 0.3s;
+            background-color: #fff; color: #000; border: none; padding: 18px; width: 100%;
+            text-transform: uppercase; font-weight: bold; letter-spacing: 3px; cursor: pointer;
+            margin-top: 25px; transition: 0.3s;
         }
 
-        .btn-premium:hover { background-color: #ddd; }
+        .btn-premium:hover { background-color: #ccc; letter-spacing: 4px; }
 
-        .footer {
-            text-align: center;
-            font-size: 11px;
-            letter-spacing: 2px;
-            padding: 50px 0;
-            color: #ccc;
-        }
+        .footer { text-align: center; font-size: 11px; letter-spacing: 2px; padding: 60px 0; color: #888; }
     </style>
 </head>
 <body>
@@ -145,30 +111,30 @@
 
     <div class="overlay">
         <nav class="navbar">
-            <img src="https://www.brandinginasia.com/wp-content/uploads/2021/09/Blackberrys-Branding-in-Asia.jpg" alt="Blackberrys Logo" class="logo-img">
+            <img src="https://www.brandinginasia.com/wp-content/uploads/2021/09/Blackberrys-Branding-in-Asia.jpg" alt="Blackberrys" class="logo-img">
         </nav>
 
         <div class="container">
             <div class="card">
                 <h2>Instant Call Back Request</h2>
-                <p style="font-family: Arial; font-size: 13px; color: #ddd;">Please provide your 10-digit mobile number. Our customer support representative will contact you personally to address your concerns.</p>
+                <p style="font-family: Arial; font-size: 13px; color: #ccc;">Enter your 10-digit number. Our customer support representative will contact you shortly.</p>
                 <label>Mobile Number</label>
-                <input type="tel" id="callPhone" placeholder="Mobile Number" maxlength="10">
+                <input type="tel" id="callPhone" placeholder="10-Digit Mobile Number" maxlength="10">
                 <button class="btn-premium" onclick="reqCall()">Request Call Back</button>
             </div>
 
             <div class="card">
                 <h2>Raise a Support Ticket</h2>
                 <label>Full Name</label>
-                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="name" placeholder="Enter Full Name">
                 <label>Order ID</label>
-                <input type="text" id="order" placeholder="e.g. BB-123456">
+                <input type="text" id="order" placeholder="e.g. BB-998877">
                 <label>Email ID</label>
-                <input type="email" id="email" placeholder="example@email.com">
+                <input type="email" id="email" placeholder="email@address.com">
                 <label>Contact Number</label>
                 <input type="tel" id="phone" placeholder="10-Digit Mobile Number" maxlength="10">
-                <label>Message</label>
-                <textarea id="msg" rows="3" placeholder="Briefly describe your concern..."></textarea>
+                <label>Concern / Message</label>
+                <textarea id="msg" rows="3" placeholder="Briefly describe your query..."></textarea>
                 <button class="btn-premium" onclick="raiseTicket()">Submit Inquiry</button>
             </div>
         </div>
@@ -196,7 +162,7 @@
             if(n && p.length === 10) {
                 alert("Thank you, " + n + ".\n\nYour grievance has been logged.\n\nTicket ID: " + tId + "\n\nOur customer support representative will review your case shortly.");
             } else {
-                alert("Please fill in all fields correctly.");
+                alert("Please ensure all fields are filled correctly.");
             }
         }
     </script>
