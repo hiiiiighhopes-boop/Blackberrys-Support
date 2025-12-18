@@ -3,163 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackberrys | Customer Support Excellence</title>
+    <title>Blackberrys | Official Support Portal</title>
     <style>
-        /* Minimalist Premium Theme */
         body {
-            background-color: #ffffff;
+            background-color: #fcfcfc;
             color: #1a1a1a;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
 
-        /* Top Navigation Bar Mockup */
         .navbar {
             border-bottom: 1px solid #eeeeee;
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: #fff;
         }
 
-        .logo {
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 22px;
-        }
+        .logo { font-weight: 900; letter-spacing: 4px; text-transform: uppercase; font-size: 22px; }
 
-        /* Main Content Container */
-        .main-content {
+        .container {
             max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
         }
 
-        .headline {
-            font-size: 28px;
-            font-weight: 300;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        .sub-headline {
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        /* The "Amazon-Style" Callback Feature */
-        .callback-card {
+        .section-box {
+            background: #fff;
             border: 1px solid #e0e0e0;
             padding: 40px;
+            margin-bottom: 30px;
             border-radius: 2px;
-            background-color: #fafafa;
         }
 
-        .callback-card h2 {
-            font-size: 18px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
+        h2 { font-size: 18px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px; }
+        
+        p { color: #666; font-size: 14px; }
 
-        .phone-input {
+        label { display: block; margin-top: 15px; font-size: 12px; font-weight: bold; text-transform: uppercase; }
+
+        input, textarea {
             width: 100%;
-            max-width: 300px;
-            padding: 15px;
+            padding: 12px;
+            margin-top: 5px;
             border: 1px solid #ccc;
-            font-size: 16px;
-            margin-bottom: 20px;
-            outline: none;
+            box-sizing: border-box;
+            font-size: 14px;
         }
 
-        .phone-input:focus {
-            border-color: #000;
-        }
-
-        .btn-call {
-            background-color: #000000;
-            color: #ffffff;
+        .btn-black {
+            background-color: #000;
+            color: #fff;
             border: none;
             padding: 15px 40px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
             letter-spacing: 1px;
-            transition: 0.3s;
         }
 
-        .btn-call:hover {
-            background-color: #333333;
-            letter-spacing: 2px;
-        }
+        .btn-black:hover { background-color: #333; }
 
-        /* Official Footer Style */
-        .footer-section {
-            margin-top: 80px;
-            border-top: 1px solid #eeeeee;
-            padding: 40px 50px;
-            display: flex;
-            justify-content: space-around;
-            font-size: 12px;
-            color: #888;
-            text-align: left;
-        }
-
-        .footer-col strong {
-            color: #000;
-            display: block;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+        .footer { padding: 40px; text-align: center; font-size: 12px; color: #999; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Blackberrys</div>
-        <div style="font-size: 12px; font-weight: bold;">KEEP RISING</div>
+        <div style="font-size: 10px; font-weight: bold;">CUSTOMER CARE</div>
     </nav>
 
-    <div class="main-content">
-        <h1 class="headline">Grievance Redressal Portal</h1>
-        <p class="sub-headline">Connecting you directly with the support team for instant solutions.</p>
+    <div class="container">
+        <div class="section-box">
+            <h2>Request a Call Back</h2>
+            <p>Please enter your mobile number. A customer representative will contact you shortly to assist with your requirements.</p>
+            <input type="tel" id="callbackPhone" placeholder="10-Digit Mobile Number" maxlength="10">
+            <button class="btn-black" onclick="requestCallback()">Request Call</button>
+        </div>
 
-        <div class="callback-card">
-            <h2>Instant Callback Request</h2>
-            <p>Enter your registered mobile number below. Our IVR will dial you back within 120 seconds.</p>
+        <div class="section-box">
+            <h2>Raise a Support Ticket</h2>
+            <p>If you have an inquiry regarding your order, please fill out the details below.</p>
             
-            <input type="tel" id="userPhone" class="phone-input" placeholder="+91 XXXX XXX XXX">
-            <br>
-            <button class="btn-call" onclick="triggerIVR()">Request Call Back</button>
+            <label>Full Name</label>
+            <input type="text" id="custName" placeholder="Enter your name">
+
+            <label>Email ID</label>
+            <input type="email" id="custEmail" placeholder="example@mail.com">
+
+            <label>Mobile Number</label>
+            <input type="tel" id="custPhone" placeholder="10-Digit Mobile Number" maxlength="10">
+
+            <label>Order ID</label>
+            <input type="text" id="orderId" placeholder="e.g. BB123456">
+
+            <label>Concern / Message</label>
+            <textarea id="concern" rows="4" placeholder="How can we help you?"></textarea>
+
+            <button class="btn-black" onclick="submitTicket()">Submit Inquiry</button>
         </div>
     </div>
 
-    <footer class="footer-section">
-        <div class="footer-col">
-            <strong>Corporate Office</strong>
-            Mohan Clothing Co. Pvt. Ltd.<br>
-            Plot No. 58-59, Udyog Vihar,<br>
-            Phase-4, Gurugram - 122015
-        </div>
-        <div class="footer-col">
-            <strong>Support Contact</strong>
-            918071811173<br>
-            Mon - Fri (10:00 AM - 6:00 PM)<br>
-            customersupport@blackberrys.com
-        </div>
+    <footer class="footer">
+        © 2025 Mohan Clothing Co. Pvt. Ltd. | Keep Rising
     </footer>
 
     <script>
-        function triggerIVR() {
-            const phone = document.getElementById('userPhone').value;
-            if (phone.length >= 10) {
-                alert("Initiating Automated Call Back to: " + phone + "\n\nPlease press 1 on your keypad to connect to the agent.");
+        function requestCallback() {
+            const phone = document.getElementById('callbackPhone').value;
+            if (phone.length === 10) {
+                alert("Thank you, Boss. A Blackberrys customer representative will call you on " + phone + " shortly.");
             } else {
-                alert("Boss, please enter a valid 10-digit number.");
+                alert("Please enter a valid 10-digit mobile number.");
+            }
+        }
+
+        function submitTicket() {
+            const name = document.getElementById('custName').value;
+            const order = document.getElementById('orderId').value;
+            const ticketId = "BB-" + Math.floor(100000 + Math.random() * 900000);
+
+            if(name && order) {
+                alert("Confirmation: \n\nDear " + name + ", your ticket has been raised successfully. \n\nTicket ID: " + ticketId + "\nOrder Reference: " + order + "\n\nYou will receive an update on your email shortly.");
+            } else {
+                alert("Please fill in all the required fields.");
             }
         }
     </script>
