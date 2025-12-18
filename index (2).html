@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackberrys Customer Support</title>
+    <style>
+        /* General Page Vibe - Matching the Screenshot */
+        body {
+            background-color: #f4f4f4; /* Light grey background */
+            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* The Main Container */
+        .container {
+            background-color: #ffffff; /* Pure white content area */
+            width: 100%;
+            max-width: 900px;
+            padding: 40px;
+            border-top: 4px solid #000; /* Sharp black top border */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Callback Section - The Amazon Style Feature */
+        .callback-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 30px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+
+        .callback-box h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="tel"] {
+            width: 250px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .btn-call {
+            background-color: #000; /* Black button like Blackberrys header */
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-call:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Style Info */
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            color: #666;
+        }
+
+        .contact-details strong { color: #000; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Blackberrys Support Center</h1>
+        <p>Keep Rising!</p>
+    </div>
+
+    <div class="callback-box">
+        <h2>Request an Instant Callback</h2>
+        <p>Don't wait on hold. Enter your number and our IVR will connect you to an agent immediately.</p>
+        
+        <input type="tel" id="userPhone" placeholder="Enter 10-digit mobile number">
+        <br>
+        <button class="btn-call" onclick="initiateIVR()">CALL ME NOW</button>
+    </div>
+
+    <div class="footer-info">
+        <div class="contact-details">
+            <p><strong>Corporate Office:</strong><br>
+            Mohan Clothing Co. Pvt. Ltd. Plot No. 58-59,<br>
+            Udyog Vihar, Phase-4, Gurugram -122015, India</p>
+        </div>
+        <div class="contact-details">
+            <p><strong>Contact Us:</strong><br>
+            customersupport@blackberrys.com<br>
+            918071811173 (10:00 AM - 6:00 PM)</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function initiateIVR() {
+        const phone = document.getElementById('userPhone').value;
+        
+        if(phone.length === 10) {
+            alert("Request Sent! \n\nConnecting to IVR system for " + phone + ". \n\nPlease pick up the call and press 1 to speak with Amit Chettri.");
+        } else {
+            alert("Boss, please enter a valid 10-digit number.");
+        }
+    }
+</script>
+
+</body>
+</html>
