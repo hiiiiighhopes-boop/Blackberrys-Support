@@ -3,136 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackberrys Customer Support</title>
+    <title>Blackberrys | Customer Support Excellence</title>
     <style>
-        /* General Page Vibe - Matching the Screenshot */
+        /* Minimalist Premium Theme */
         body {
-            background-color: #f4f4f4; /* Light grey background */
-            color: #333;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 40px;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Bar Mockup */
+        .navbar {
+            border-bottom: 1px solid #eeeeee;
+            padding: 20px 50px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* The Main Container */
-        .container {
-            background-color: #ffffff; /* Pure white content area */
-            width: 100%;
-            max-width: 900px;
-            padding: 40px;
-            border-top: 4px solid #000; /* Sharp black top border */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        .logo {
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 22px;
         }
 
-        .header {
+        /* Main Content Container */
+        .main-content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
             text-align: center;
+        }
+
+        .headline {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .sub-headline {
+            color: #666;
             margin-bottom: 40px;
         }
 
-        h1 {
-            font-size: 24px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        /* The "Amazon-Style" Callback Feature */
+        .callback-card {
+            border: 1px solid #e0e0e0;
+            padding: 40px;
+            border-radius: 2px;
+            background-color: #fafafa;
         }
 
-        /* Callback Section - The Amazon Style Feature */
-        .callback-box {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 30px;
-            text-align: center;
-            border-radius: 4px;
-            margin-top: 30px;
-        }
-
-        .callback-box h2 {
+        .callback-card h2 {
             font-size: 18px;
-            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
-        input[type="tel"] {
-            width: 250px;
-            padding: 12px;
+        .phone-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
             border: 1px solid #ccc;
-            border-radius: 4px;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .phone-input:focus {
+            border-color: #000;
         }
 
         .btn-call {
-            background-color: #000; /* Black button like Blackberrys header */
-            color: #fff;
-            padding: 12px 30px;
+            background-color: #000000;
+            color: #ffffff;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            padding: 15px 40px;
+            font-size: 14px;
             font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         .btn-call:hover {
-            background-color: #333;
-            transform: translateY(-2px);
+            background-color: #333333;
+            letter-spacing: 2px;
         }
 
-        /* Footer Style Info */
-        .footer-info {
+        /* Official Footer Style */
+        .footer-section {
+            margin-top: 80px;
+            border-top: 1px solid #eeeeee;
+            padding: 40px 50px;
             display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            font-size: 13px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-            color: #666;
+            justify-content: space-around;
+            font-size: 12px;
+            color: #888;
+            text-align: left;
         }
 
-        .contact-details strong { color: #000; }
+        .footer-col strong {
+            color: #000;
+            display: block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>Blackberrys Support Center</h1>
-        <p>Keep Rising!</p>
-    </div>
+    <nav class="navbar">
+        <div class="logo">Blackberrys</div>
+        <div style="font-size: 12px; font-weight: bold;">KEEP RISING</div>
+    </nav>
 
-    <div class="callback-box">
-        <h2>Request an Instant Callback</h2>
-        <p>Don't wait on hold. Enter your number and our IVR will connect you to an agent immediately.</p>
-        
-        <input type="tel" id="userPhone" placeholder="Enter 10-digit mobile number">
-        <br>
-        <button class="btn-call" onclick="initiateIVR()">CALL ME NOW</button>
-    </div>
+    <div class="main-content">
+        <h1 class="headline">Grievance Redressal Portal</h1>
+        <p class="sub-headline">Connecting you directly with the support team for instant solutions.</p>
 
-    <div class="footer-info">
-        <div class="contact-details">
-            <p><strong>Corporate Office:</strong><br>
-            Mohan Clothing Co. Pvt. Ltd. Plot No. 58-59,<br>
-            Udyog Vihar, Phase-4, Gurugram -122015, India</p>
-        </div>
-        <div class="contact-details">
-            <p><strong>Contact Us:</strong><br>
-            customersupport@blackberrys.com<br>
-            918071811173 (10:00 AM - 6:00 PM)</p>
+        <div class="callback-card">
+            <h2>Instant Callback Request</h2>
+            <p>Enter your registered mobile number below. Our IVR will dial you back within 120 seconds.</p>
+            
+            <input type="tel" id="userPhone" class="phone-input" placeholder="+91 XXXX XXX XXX">
+            <br>
+            <button class="btn-call" onclick="triggerIVR()">Request Call Back</button>
         </div>
     </div>
-</div>
 
-<script>
-    function initiateIVR() {
-        const phone = document.getElementById('userPhone').value;
-        
-        if(phone.length === 10) {
-            alert("Request Sent! \n\nConnecting to IVR system for " + phone + ". \n\nPlease pick up the call and press 1 to speak with Amit Chettri.");
-        } else {
-            alert("Boss, please enter a valid 10-digit number.");
+    <footer class="footer-section">
+        <div class="footer-col">
+            <strong>Corporate Office</strong>
+            Mohan Clothing Co. Pvt. Ltd.<br>
+            Plot No. 58-59, Udyog Vihar,<br>
+            Phase-4, Gurugram - 122015
+        </div>
+        <div class="footer-col">
+            <strong>Support Contact</strong>
+            918071811173<br>
+            Mon - Fri (10:00 AM - 6:00 PM)<br>
+            customersupport@blackberrys.com
+        </div>
+    </footer>
+
+    <script>
+        function triggerIVR() {
+            const phone = document.getElementById('userPhone').value;
+            if (phone.length >= 10) {
+                alert("Initiating Automated Call Back to: " + phone + "\n\nPlease press 1 on your keypad to connect to the agent.");
+            } else {
+                alert("Boss, please enter a valid 10-digit number.");
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
