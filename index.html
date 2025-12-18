@@ -8,12 +8,11 @@
         body {
             background-color: #ffffff;
             color: #222;
-            font-family: 'Times New Roman', Times, serif; /* Elegant, premium feel */
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
         }
 
-        /* Header Style with Logo */
         .navbar {
             padding: 30px 50px;
             text-align: center;
@@ -31,7 +30,6 @@
             padding: 20px;
         }
 
-        /* Box styling for features */
         .card {
             border: 1px solid #dcdcdc;
             padding: 45px;
@@ -57,7 +55,6 @@
             margin-bottom: 25px;
         }
 
-        /* Form styling */
         label {
             display: block;
             margin-top: 20px;
@@ -76,12 +73,6 @@
             box-sizing: border-box;
             font-size: 15px;
             background: #fafafa;
-        }
-
-        input:focus {
-            border-color: #000;
-            background: #fff;
-            outline: none;
         }
 
         .btn-premium {
@@ -122,8 +113,8 @@
     <div class="container">
         
         <div class="card">
-            <h2>Personal Consultation</h2>
-            <p>Please provide your contact details. A customer representative will contact you personally to address your concerns.</p>
+            <h2>Instant Call Back Request</h2>
+            <p>Please provide your contact details. Our customer support representative will contact you personally to address your concerns.</p>
             
             <label>Mobile Number</label>
             <input type="tel" id="callPhone" placeholder="Enter 10-digit number" maxlength="10">
@@ -163,7 +154,7 @@
         function reqCall() {
             const p = document.getElementById('callPhone').value;
             if(p.length === 10) {
-                alert("Request Acknowledged.\n\nThank you for reaching out. A Blackberrys customer representative will contact you on " + p + " shortly.");
+                alert("Request Acknowledged.\n\nThank you for reaching out. Our customer support representative will contact you on " + p + " shortly.");
             } else {
                 alert("Please ensure the mobile number provided is exactly 10 digits.");
             }
@@ -175,7 +166,7 @@
             const tId = "BB-SR-" + Math.floor(100000 + Math.random() * 900000);
 
             if(n && o && document.getElementById('phone').value.length === 10) {
-                alert("Thank you, " + n + ".\n\nYour grievance has been logged.\n\nTicket ID: " + tId + "\n\nPlease keep this ID for future reference.");
+                alert("Thank you, " + n + ".\n\nYour grievance has been logged.\n\nTicket ID: " + tId + "\n\nOur customer support representative will review your case and provide an update shortly.");
             } else {
                 alert("Please fill in all required fields and ensure the phone number is correct.");
             }
